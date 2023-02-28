@@ -31,16 +31,17 @@ td {
     border: solid 1.5px #fff;
 }
 
-
 .display-6 {
     font-size: 1.5rem;
 }
 
-form {
+.form {
     background: url(./media/c3po.webp) no-repeat;
     background-size: cover;
 }
-
+#mensaje {
+    width: 70%;
+}
 label {
     color: #fff;
 }
