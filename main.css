@@ -38,7 +38,7 @@ td {
 
 form {
     background: url(./media/c3po.webp) no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 
 label {
@@ -227,7 +227,7 @@ header {
     }
 
     #titulo,
-    #titulo4 {
+    #titulo4, #titulo5, #titulo3, #titulo2 {
         margin-top: 56px;
         margin-bottom: 10px;
     }

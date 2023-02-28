@@ -7,41 +7,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
     <link rel="shortcut icon" href="../media/logo.jpg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;700&display=swap"
-        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../main.css" />
 </head>
 
 <body>
-    <header id="titulo2" class="center">
+
+    <nav class="navbar navbar-light fixed-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./episodio_4.html">Episodio IV</a>
+                            <a class="nav-link" href="./episodio_5.html">Episodio V</a>
+                            <a class="nav-link" href="./episodio_6.html">Episodio VI</a>
+                            <a class="nav-link" href="./contacto.html">Contacto</a>
+                        </li>
+
+                </div>
+
+            </div>
+    </nav>
+
+    <header id="titulo2" class="display-5 center">
         <h1>Blog sobre la trilogía original de Star Wars</h1>
-        <img src="../media/contacto-inicio.webp" width="800px" height="316px"
+        <img class="img-fluid" src="../media/contacto-inicio.webp" width="800px" height="316px"
             alt="Luke y Obi-Wan viendo el mensaje de la Princesa Leia proyectado por r2d2" />
     </header>
     <div>
-        <h2 class="center">Déjanos un mensaje</h2>
+        <h2 class="display-6 center">Déjanos un mensaje</h2>
     </div>
     <hr>
     <nav id="menu">
         <ul>
-            <li> <a href="../index.html">Inicio <br> <img src="../media/home.jpg" width="100px"
+            <li class="item1"> <a href="../index.html">Inicio <br> <img src="../media/home.jpg" width="100px"
                         height="151.219px" /></a></li>
-            <li> <a href="./episodio_4.html">Episodio IV<br> "Una nueva esperanza" <br> <img
+            <li class="item2"> <a href="./episodio_4.html">Episodio IV<br> "Una nueva esperanza" <br> <img
                         src="../media/episodio4-cover.jpg" width="100px" /></a> </li>
-            <li> <a href="./episodio_5.html">Episodio V <br> "El imperio contraataca" <br> <img
+            <li class="item3"> <a href="./episodio_5.html">Episodio V <br> "El imperio contraataca" <br> <img
                         src="../media/episodio5-cover.jpg" width="100px" /></a> </li>
-            <li> <a href="./episodio_6.html">Episodio VI <br>"El retorno del Jedi" <br> <img
+            <li class="item4"> <a href="./episodio_6.html">Episodio VI <br>"El retorno del Jedi" <br> <img
                         src="../media/episodio6-cover.jpg" width="100px" height="151.219px" /> </a> </li>
-            <li> <a href="#">Contacto <br> <img src="../media/r_2_d_2.jpg" width="100px" height="151.219px" /></a></li>
+            <li class="item5"> <a href="#">Contacto <br> <img src="../media/r_2_d_2.jpg" width="100px" height="151.219px" /></a></li>
         </ul>
     </nav>
     <hr>
-    <h3>
+    <div class="container"></div>
+        <h3>
         Formulario de contacto
-    </h3>
-    <div>
+        </h3>
+    
         <form class="form" action="#" method="get" enctype="text/plain">
             <label for="nombre">
                 Nombre
@@ -50,7 +80,7 @@
             <label for="email">email </label> <br>
             <input type="email" id="email" name="email" placeholder="email" /> <br>
             <label for="mensaje">Mensaje</label> <br>
-            <textarea id="mensaje" name="mensaje" cols="63" rows="10" placeholder="Escribe tu mensaje"></textarea> <br>
+            <textarea id="mensaje" name="mensaje" cols="35" rows="10" placeholder="Escribe tu mensaje"></textarea> <br>
             <button class="button" type="submit">Enviar</button>
             <button class="button" type="reset">Limpiar formulario</button>
         </form>
@@ -69,6 +99,12 @@
         </nav>
 
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous">
+    </script>
+
 </body>
 
 </html>
