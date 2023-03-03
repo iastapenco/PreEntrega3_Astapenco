@@ -22,11 +22,81 @@ footer nav {
   align-items: center;
 }
 
+#mensaje {
+  width: 70%;
+}
+
+.flex-container1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 15px;
+}
+
+.flex-container2 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+#menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 10px 15px;
+}
+#menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#menu ul li {
+  display: inline-block;
+}
+#menu ul li a {
+  display: block;
+  text-decoration: none;
+  text-align: justify;
+  padding: 0;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  margin: 0 auto;
+}
+
+.iframe {
+  display: block;
+  margin: 0 auto;
+}
+
+div form {
+  position: relative;
+  left: 33.33%;
+}
+
+#titulo,
+#titulo4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   font-size: small;
   margin: 0 10px;
-  /*darle la misma clase a todos los elementos centrados*/
+}
+body header {
+  font-family: "Montserrat", sans-serif;
+  font-size: small;
 }
 body table {
   border-collapse: collapse;
@@ -99,6 +169,10 @@ body footer {
   background-color: #434343;
   border-radius: 1px solid #434343;
   color: #fff;
+}
+body .yoda {
+  width: 500px;
+  height: 320px;
 }
 
 @media screen and (min-width: 768px) {

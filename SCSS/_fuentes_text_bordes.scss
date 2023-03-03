@@ -3,6 +3,11 @@ body {
     font-size: small;
     margin: 0 10px;
 
+    header {
+        font-family: 'Montserrat', sans-serif;
+        font-size: small;
+    }
+
     table {
         border-collapse: collapse;
 
@@ -13,7 +18,6 @@ body {
         }
     }
 
-    /*darle la misma clase a todos los elementos centrados*/
     .center {
         text-align: center;
     }
@@ -33,4 +37,5 @@ body {
             }
         }
     }
+
 }

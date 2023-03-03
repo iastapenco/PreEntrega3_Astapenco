@@ -1,42 +1,6 @@
-
-
-
-
-
-
 #mensaje {
     width: 70%;
 }
-
-
-
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-#menu ul li {
-    display: inline-block;
-}
-
-
-
-#menu ul li a {
-    display: block;
-    text-decoration: none;
-    text-align: justify;
-    padding: 0;
-}
-
-
-
-
-
-
-
-
 
 .flex-container1 {
     display: flex;
@@ -57,6 +21,23 @@ ul {
     flex-direction: row;
     justify-content: space-evenly;
     margin: 10px 15px;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            display: inline-block;
+
+            a {
+                display: block;
+                text-decoration: none;
+                text-align: justify;
+                padding: 0;
+            }
+        }
+    }
 }
 
 section {
@@ -65,8 +46,6 @@ section {
     justify-content: center;
     align-items: center;
 }
-
-
 
 table {
     margin: 0 auto;
@@ -77,9 +56,11 @@ table {
     margin: 0 auto;
 }
 
-div>form {
-    position: relative;
-    left: 33.33%;
+div {
+    form {
+        position: relative;
+        left: 33.33%;
+    }
 }
 
 #titulo,
@@ -88,16 +69,3 @@ div>form {
     flex-direction: column;
     align-items: center;
 }
-
-header {
-    font-family: 'Montserrat', sans-serif;
-    font-size: small;
-}
-
-.yoda {
-    width: 500px;
-    height: 320px;
-}
-
-
-
