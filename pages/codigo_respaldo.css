@@ -1,11 +1,8 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #ddd;
-    background: url(./media/fondo-hiperespacial-3d-efecto-tunel-urdimbre_1048-12526.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
+    
     font-size: small;
-    color: #fff;
+    
     margin: 0 10px;
 }
 
@@ -22,7 +19,7 @@ td {
 }
 
 table {
-    border-color: whitesmoke;
+    
     border-collapse: collapse;
 }
 
@@ -35,16 +32,11 @@ td {
     font-size: 1.5rem;
 }
 
-.form {
-    background: url(./media/c3po.webp) no-repeat;
-    background-size: cover;
-}
+
 #mensaje {
     width: 70%;
 }
-label {
-    color: #fff;
-}
+
 
 .underline {
     text-decoration: underline;
@@ -75,50 +67,11 @@ ul {
     padding: 0;
 }
 
-th {
-    background-color: darkgrey;
-}
 
-tr:hover {
-    background-color: #e8e337;
-    transition: .4s;
-}
 
-a {
-    cursor: pointer;
-}
 
-a:link {
-    color: #eee;
-}
 
-a:visited {
-    color: #eee;
-}
 
-a:hover {
-    color: #e8e337;
-    transition: .4s;
-}
-
-p {
-    color: #fff;
-}
-
-button:hover {
-    color: #451a2b;
-}
-
-.button {
-    cursor: pointer;
-    border-bottom: #222 outset;
-}
-
-footer {
-    background-color: #434343;
-    border-radius: 1px solid #434343;
-    color: #fff;
-}
 
 footer nav a {
     color: #fff;

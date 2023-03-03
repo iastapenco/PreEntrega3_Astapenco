@@ -1,3 +1,53 @@
-
+body {
+  background: url("../media/fondo-hiperespacial-3d-efecto-tunel-urdimbre_1048-12526.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+body table {
+  border-color: whitesmoke;
+}
+body table th {
+  background-color: darkgrey;
+}
+body table tr:hover {
+  background-color: #e8e337;
+  transition: 0.4s;
+}
+body .form {
+  background: url("../media/c3po.webp") no-repeat;
+  background-size: cover;
+}
+body .form label {
+  color: #fff;
+}
+body .form button:hover {
+  color: #451a2b;
+}
+body .form .button {
+  cursor: pointer;
+  border-bottom: #222 outset;
+}
+body a {
+  cursor: pointer;
+}
+body a:link {
+  color: #eee;
+}
+body a:visited {
+  color: #eee;
+}
+body a:hover {
+  color: #e8e337;
+  transition: 0.4s;
+}
+body p {
+  color: #fff;
+}
+body footer {
+  background-color: #434343;
+  border-radius: 1px solid #434343;
+  color: #fff;
+}
 
 /*# sourceMappingURL=main.css.map */
