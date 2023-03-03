@@ -1,3 +1,54 @@
+footer nav a {
+  color: #fff;
+  text-decoration: none;
+  padding-left: 14px;
+  display: inline-block;
+  height: 1rem;
+}
+footer div h4 {
+  padding-left: 14px;
+}
+footer div a {
+  padding-left: 14px;
+}
+footer nav {
+  position: absolute;
+  right: 50px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  align-items: center;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: small;
+  margin: 0 10px;
+  /*darle la misma clase a todos los elementos centrados*/
+}
+body table {
+  border-collapse: collapse;
+}
+body table th,
+body table td {
+  border: solid 1.5px #fff;
+  text-align: center;
+}
+body .center {
+  text-align: center;
+}
+body .underline {
+  text-decoration: underline;
+}
+body .display-6 {
+  font-size: 1.5rem;
+}
+body .grid-container div h4 {
+  font-size: 13px;
+}
+
 body {
   background: url("../media/fondo-hiperespacial-3d-efecto-tunel-urdimbre_1048-12526.webp");
   background-repeat: no-repeat;
@@ -48,6 +99,137 @@ body footer {
   background-color: #434343;
   border-radius: 1px solid #434343;
   color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  #menu {
+    display: none;
+  }
+  .yoda {
+    width: 320px;
+    height: auto;
+  }
+  #titulo,
+  #titulo4, #titulo5, #titulo3, #titulo2 {
+    margin-top: 56px;
+    margin-bottom: 10px;
+  }
+  .navbar {
+    background-color: #686868;
+  }
+  hr {
+    display: none;
+  }
+  .display-5 {
+    font-size: 1.5rem;
+  }
+  .display-6 {
+    font-size: 1rem;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    align-items: center;
+    margin-top: 10px;
+  }
+}
+@media screen and (min-width: 1251px) {
+  #menu ul li a {
+    padding: 15px 60px;
+  }
+}
+@media screen and (min-width: 900px) {
+  #menu ul li a {
+    padding: 15px 25px;
+  }
+  .iframe {
+    width: 560px;
+    height: 315px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .portada {
+    max-width: 75vw;
+  }
+  .flex-container1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .iframe {
+    width: 478px;
+    height: 268px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .portada {
+    max-height: 40%;
+  }
+  .destacado {
+    font-size: 0.75rem;
+  }
+  .iframe {
+    width: 233px;
+    height: 131px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 900px) {
+  #menu {
+    display: block;
+  }
+  #menu > ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: space-between;
+    align-items: center;
+  }
+  .item1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .item2 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+  .item3 {
+    grid-column: 5/6;
+    grid-row: 1/2;
+  }
+  .item4 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .item5 {
+    grid-column: 4/5;
+    grid-row: 2/3;
+  }
+}
+@media screen and (max-width: 425px) {
+  footer nav {
+    position: absolute;
+    right: 15px;
+  }
+  footer nav a {
+    font-size: 10px;
+  }
+  .grid-container div h4 {
+    font-size: 10px;
+    padding-left: 25px;
+  }
+  footer nav a {
+    padding-left: 10px;
+  }
+  .iframe {
+    width: 264px;
+    height: 148px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

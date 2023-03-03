@@ -1,0 +1,33 @@
+footer {
+
+    nav {
+        a {
+            color: #fff;
+            text-decoration: none;
+            padding-left: 14px;
+            display: inline-block;
+            height: 1rem;
+        }
+    }
+
+    div {
+        h4 {
+            padding-left: 14px;
+        }
+
+        a {
+            padding-left: 14px;
+        }
+    }
+
+    nav {
+        position: absolute;
+        right: 50px;
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    align-items: center;
+}

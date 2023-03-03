@@ -1,5 +1,5 @@
 body {
-        background: url("../media/fondo-hiperespacial-3d-efecto-tunel-urdimbre_1048-12526.webp");
+    background: url("../media/fondo-hiperespacial-3d-efecto-tunel-urdimbre_1048-12526.webp");
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
@@ -29,7 +29,7 @@ body {
         button:hover {
             color: #451a2b;
         }
-        
+
         .button {
             cursor: pointer;
             border-bottom: #222 outset;
@@ -38,29 +38,28 @@ body {
 
     a {
         cursor: pointer;
-            &:link {
-                color: #eee;
-            }
 
-            &:visited {
-                color: #eee;
-            }
+        &:link {
+            color: #eee;
+        }
 
-            &:hover {
-                color: #e8e337;
-                transition: .4s;
-            }
+        &:visited {
+            color: #eee;
+        }
+
+        &:hover {
+            color: #e8e337;
+            transition: .4s;
+        }
     }
 
     p {
         color: #fff;
     }
-    
+
     footer {
         background-color: #434343;
         border-radius: 1px solid #434343;
         color: #fff;
-
-
     }
 }
