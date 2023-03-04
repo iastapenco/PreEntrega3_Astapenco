@@ -98,6 +98,9 @@ body header {
   font-family: "Montserrat", sans-serif;
   font-size: small;
 }
+body .nav {
+  border-radius: 8px;
+}
 body table {
   border-collapse: collapse;
 }
@@ -120,10 +123,13 @@ body .grid-container div h4 {
 }
 
 body {
-  background: url("../media/fondo-hiperespacial-3d-efecto-tunel-urdimbre_1048-12526.webp");
+  background-color: #080808;
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
+}
+body .nav {
+  background-color: #434343;
 }
 body table {
   border-color: whitesmoke;
@@ -149,16 +155,16 @@ body .form .button {
   cursor: pointer;
   border-bottom: #222 outset;
 }
-body a {
+body a, body .nav-link {
   cursor: pointer;
 }
-body a:link {
+body a:link, body .nav-link:link {
   color: #eee;
 }
-body a:visited {
+body a:visited, body .nav-link:visited {
   color: #eee;
 }
-body a:hover {
+body a:hover, body .nav-link:hover {
   color: #e8e337;
   transition: 0.4s;
 }
@@ -182,6 +188,9 @@ body .yoda {
 }
 @media screen and (max-width: 767px) {
   #menu {
+    display: none;
+  }
+  .nav {
     display: none;
   }
   .yoda {
@@ -290,13 +299,11 @@ body .yoda {
   }
   footer nav a {
     font-size: 10px;
+    padding-left: 10px;
   }
   .grid-container div h4 {
     font-size: 10px;
     padding-left: 25px;
-  }
-  footer nav a {
-    padding-left: 10px;
   }
   .iframe {
     width: 264px;
