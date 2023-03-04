@@ -16,6 +16,12 @@
     flex-wrap: wrap;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    align-items: center;
+}
+
 #menu {
     display: flex;
     flex-direction: row;

@@ -16,12 +16,6 @@ footer nav {
   right: 50px;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 25% 75%;
-  align-items: center;
-}
-
 #mensaje {
   width: 70%;
 }
@@ -38,6 +32,12 @@ footer nav {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  align-items: center;
 }
 
 #menu {
@@ -189,7 +189,10 @@ body .yoda {
     height: auto;
   }
   #titulo,
-  #titulo4, #titulo5, #titulo3, #titulo2 {
+  #titulo4,
+  #titulo5,
+  #titulo3,
+  #titulo2 {
     margin-top: 56px;
     margin-bottom: 10px;
   }
@@ -206,9 +209,7 @@ body .yoda {
     font-size: 1rem;
   }
   .grid-container {
-    display: grid;
     grid-template-columns: 35% 65%;
-    align-items: center;
     margin-top: 10px;
   }
 }
@@ -231,10 +232,7 @@ body .yoda {
     max-width: 75vw;
   }
   .flex-container1 {
-    display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
   }
   .iframe {
     width: 478px;
@@ -257,7 +255,7 @@ body .yoda {
   #menu {
     display: block;
   }
-  #menu > ul {
+  #menu ul {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 1fr);
