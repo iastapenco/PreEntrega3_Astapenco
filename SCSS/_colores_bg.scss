@@ -1,5 +1,5 @@
 body {
-    background-color: #080808;
+    background: url("../media/fondo-hiperespacial-3d-efecto-tunel-urdimbre_1048-12526.webp");
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
@@ -70,5 +70,9 @@ body {
     .yoda {
         width: 500px;
         height: 320px;
+    }
+
+    .bg-black {
+        background-color: #000000d1;
     }
 }
