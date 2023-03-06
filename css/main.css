@@ -45,6 +45,13 @@
   animation-duration: 4s;
 }
 
+.nav-item {
+  transition: width 2s;
+}
+.nav-item:hover {
+  width: 300px;
+}
+
 footer nav a {
   color: #fff;
   text-decoration: none;
