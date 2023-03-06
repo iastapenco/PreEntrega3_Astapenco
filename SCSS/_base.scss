@@ -1,4 +1,59 @@
+@keyframes navanimation {
+    0% {
+        position: relative;
+        top: -40px;
+    }
 
+    25% {
+        position: relative;
+        top: -30px;
+    }
+
+    50% {
+        position: relative;
+        top: -20px;
+    }
+
+    75% {
+        position: relative;
+        top: -10px;
+    }
+
+    100% {
+        position: static;
+        top: 0;
+    }
+}
+
+@keyframes navlinkanimation {
+    0% {
+        visibility: none;
+    }
+
+    50% {
+        visibility: visible;
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 0.75;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.nav {
+    animation-name: navanimation;
+    animation-duration: 2s;
+
+}
+
+.nav-item, .nav-link {
+    animation-name: navlinkanimation;
+    animation-duration: 4s;
+}
 
 footer {
 
@@ -27,4 +82,3 @@ footer {
         right: 50px;
     }
 }
-
