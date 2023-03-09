@@ -1,3 +1,21 @@
+footer nav {
+  position: absolute;
+  right: 50px;
+}
+footer nav a {
+  color: #eee;
+  text-decoration: none;
+  padding-left: 14px;
+  display: inline-block;
+  height: 1rem;
+}
+footer div h4 {
+  padding-left: 14px;
+}
+footer div a {
+  padding-left: 14px;
+}
+
 @keyframes navanimation {
   0% {
     position: relative;
@@ -52,29 +70,11 @@
   width: 300px;
 }
 
-footer nav a {
-  color: #fff;
-  text-decoration: none;
-  padding-left: 14px;
-  display: inline-block;
-  height: 1rem;
-}
-footer div h4 {
-  padding-left: 14px;
-}
-footer div a {
-  padding-left: 14px;
-}
-footer nav {
-  position: absolute;
-  right: 50px;
-}
-
 #mensaje {
   width: 70%;
 }
 
-.flex-container1 {
+.flex-container1, #menu {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -95,9 +95,7 @@ footer nav {
 }
 
 #menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   margin: 10px 15px;
 }
 #menu ul {
@@ -109,9 +107,12 @@ footer nav {
   display: inline-block;
 }
 #menu ul li a {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
-  text-align: justify;
+  text-align: center;
   padding: 0;
 }
 
@@ -137,9 +138,13 @@ div form {
 }
 
 #titulo,
-#titulo4 {
+#titulo4,
+#titulo5,
+#titulo3,
+#titulo2 {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -297,7 +302,7 @@ body .bg-black {
   .portada {
     max-width: 75vw;
   }
-  .flex-container1 {
+  .flex-container1, #menu {
     flex-direction: column;
   }
   .iframe {

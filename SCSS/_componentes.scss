@@ -1,0 +1,31 @@
+$color-link: #eee;
+
+$padd-l: 14px;
+
+footer {
+
+    nav {
+        position: absolute;
+        right: 50px;
+
+        a {
+            color: $color-link;
+            text-decoration: none;
+            padding-left: 14px;
+            display: inline-block;
+            height: 1rem;
+        }
+    }
+
+    div {
+        h4 {
+            padding-left: $padd-l;
+        }
+
+        a {
+            padding-left: $padd-l;
+        }
+    }
+
+    
+}

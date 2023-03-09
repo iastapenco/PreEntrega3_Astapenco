@@ -1,3 +1,10 @@
+@mixin flex-column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #mensaje {
     width: 70%;
 }
@@ -23,9 +30,8 @@
 }
 
 #menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    @extend .flex-container1;
+    justify-content: center;
     margin: 10px 15px;
 
     ul {
@@ -37,9 +43,9 @@
             display: inline-block;
 
             a {
-                display: block;
+                @include flex-column-center;
                 text-decoration: none;
-                text-align: justify;
+                text-align: center;
                 padding: 0;
             }
         }
@@ -47,10 +53,7 @@
 }
 
 section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flex-column-center;
 }
 
 table {
@@ -70,8 +73,9 @@ div {
 }
 
 #titulo,
-#titulo4 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#titulo4,
+#titulo5,
+#titulo3,
+#titulo2 {
+    @include flex-column-center;
 }
