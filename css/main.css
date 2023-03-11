@@ -148,6 +148,11 @@ div form {
   align-items: center;
 }
 
+.vacio {
+  display: block;
+  height: 39px;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   font-size: small;

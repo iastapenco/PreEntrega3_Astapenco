@@ -79,3 +79,8 @@ div {
 #titulo2 {
     @include flex-column-center;
 }
+
+.vacio {
+    display: block;
+    height: 39px;
+}
