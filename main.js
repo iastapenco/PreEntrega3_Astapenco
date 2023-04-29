@@ -43,7 +43,9 @@ function obtenerArticulo(nombreArticulo) {
         var modal1 = new bootstrap.Modal(document.getElementById('modal'));
         modal1.toggle();
         localStorage.removeItem("articulos_seleccionados");
-        document.getElementById("lista_articulos").innerHTML = "";
+        setTimeout(() => {
+            document.getElementById("lista_articulos").innerHTML = "";
+        }, 3000);
     }
 }
 
