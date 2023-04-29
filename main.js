@@ -14,13 +14,21 @@ const articulos = [
     new Articulo("medias", 300),
 ]
 
-const articulosSeleccionados = [];
+const articulosSeleccionados = inicializarArticulosSeleccionados();
 const descuentosFinales = [];
 let descuentoTotal = 0;
 let preciosSinDescuento = 0;
+function inicializarArticulosSeleccionados() {
+    const articulosStorage = localStorage.getItem("articulos_seleccionados");
+    const articulosParsed = JSON.parse(articulosStorage);
+    return articulosParsed != null ? articulosParsed : [] ;
+    
+};
 
 function añadirArticulo(x) {
     articulosSeleccionados.push(x);
+    const articulosStorage = JSON.stringify(articulosSeleccionados);
+    localStorage.setItem("articulos_seleccionados", articulosStorage);
 };
 
 function obtenerArticulo(nombreArticulo) {
@@ -32,31 +40,38 @@ function obtenerArticulo(nombreArticulo) {
         document.getElementById("modal-calculadora").innerText = `El descuento total será $ ${descuentoTotal} y el pago total $ ${preciosSinDescuento - descuentoTotal}`
         var modal1 = new bootstrap.Modal(document.getElementById('modal'));
         modal1.toggle();
+        localStorage.removeItem("articulos_seleccionados")
     }
 }
 
 document.getElementById("btn-jeans").addEventListener("click", () => {
-    obtenerArticulo("pantalón jeans")
+    obtenerArticulo("pantalón jeans");
+    document.getElementById("btn-jeans").setAttribute("class", "btn btn-success btn-lg");
 })
 
 document.getElementById("btn-vestir").addEventListener("click", () => {
-    obtenerArticulo("pantalón de vestir")
+    obtenerArticulo("pantalón de vestir");
+    document.getElementById("btn-vestir").setAttribute("class", "btn btn-success btn-lg");
 })
 
 document.getElementById("btn-remera").addEventListener("click", () => {
-    obtenerArticulo("remera")
+    obtenerArticulo("remera");
+    document.getElementById("btn-remera").setAttribute("class", "btn btn-success btn-lg");
 })
 
 document.getElementById("btn-buzo").addEventListener("click", () => {
-    obtenerArticulo("buzo")
+    obtenerArticulo("buzo");
+    document.getElementById("btn-buzo").setAttribute("class", "btn btn-success btn-lg");
 })
 
 document.getElementById("btn-camisa").addEventListener("click", () => {
-    obtenerArticulo("camisa")
+    obtenerArticulo("camisa");
+    document.getElementById("btn-camisa").setAttribute("class", "btn btn-success btn-lg");
 })
 
 document.getElementById("btn-medias").addEventListener("click", () => {
-    obtenerArticulo("medias")
+    obtenerArticulo("medias");
+    document.getElementById("btn-medias").setAttribute("class", "btn btn-success btn-lg");
 })
 
 
@@ -83,3 +98,4 @@ const obtenerPrecio = () => {
 }
 
 console.log(descuentosFinales);
+
