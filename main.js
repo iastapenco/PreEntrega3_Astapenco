@@ -13,11 +13,13 @@ const articulos = [
     new Articulo("Camisa", 1600),
     new Articulo("Medias", 300),
 ]
-
-const articulosSeleccionados = inicializarArticulosSeleccionados();
+//Variables globales a inicializar.
+let articulosSeleccionados = inicializarArticulosSeleccionados();
 const descuentosFinales = [];
 let descuentoTotal = 0;
 let preciosSinDescuento = 0;
+
+//Esta función analiza si hay elementos guardados en el almacenamiento local al cargar la página, si hay más de dos elementos guardados vacía el Local Storage para evitar bug; de lo contrario pushea al array articulosSeleccionados esos artículos o devuelve un array vacío.
 function inicializarArticulosSeleccionados() {
     const articulosStorage = localStorage.getItem("articulos_seleccionados");
     const articulosParsed = JSON.parse(articulosStorage);
@@ -26,12 +28,14 @@ function inicializarArticulosSeleccionados() {
     
 };
 
+//Esta función pushea los artículos seleccionados al array articulosSeleccionados y lo almacena en el Local Storage.
 function añadirArticulo(x) {
     articulosSeleccionados.push(x);
     const articulosStorage = JSON.stringify(articulosSeleccionados);
     localStorage.setItem("articulos_seleccionados", articulosStorage);
 };
 
+//Esta función obtiene del array articulos el artículo seleccionado, lo agrega al array articulosSeleccionados y activa la función agregarAListaSeleccionados. A su vez cuando el length de dicho array es 3 calcula el descuento total y le muestra al cliente el descuento total y el precio a pagar a través de un modal.
 function obtenerArticulo(nombreArticulo) {
     const articulo1 = articulos.find(articulo => articulo.nombre == nombreArticulo);
     añadirArticulo(articulo1);
@@ -43,12 +47,14 @@ function obtenerArticulo(nombreArticulo) {
         var modal1 = new bootstrap.Modal(document.getElementById('modal'));
         modal1.toggle();
         localStorage.removeItem("articulos_seleccionados");
+        articulosSeleccionados = [];
         setTimeout(() => {
             document.getElementById("lista_articulos").innerHTML = "";
         }, 3000);
     }
 }
 
+//Esta función manipula el DOM para ir mostrando al cliente los artículos que selecciona.
 function agregarAListaDeSeleccionados(articulo) {
     const li = document.createElement("li");
     li.setAttribute("class", "list-group-item d-flex justify-content-between align-items-start");
@@ -69,12 +75,16 @@ function agregarAListaDeSeleccionados(articulo) {
 
     ol.appendChild(li);
 }
+
+//Esta función le muestra visualmente al cliente que se seleccionó el artículo correctamente.
 function agregadoCorrectamente(botonId) {
     document.getElementById(botonId).setAttribute("class", "btn btn-success btn-lg");
     setTimeout(() => {
         document.getElementById(botonId).setAttribute("class", "btn btn-primary btn-lg");
     }, 1000);
 }
+
+//Manejadores de eventos.
 document.getElementById("btn-jeans").addEventListener("click", () => {
     obtenerArticulo("Pantalón jeans");
     agregadoCorrectamente("btn-jeans");
@@ -109,6 +119,7 @@ articulosSeleccionados.forEach(element => {
     agregarAListaDeSeleccionados(element);
 });
 
+//Esta función crea un nuevo array con los precios de los precios del array articulosSeleccionados y le aplica los descuentos indicados en el HTML: 10% al primero, 20% al segundo y 30% al tercero (iterando sobre el nuevo array). A la vez calcula el descuento total y cuánto se pagaría sin descuento.
 const obtenerPrecio = () => {
     const preciosSeleccionados = articulosSeleccionados.map(art => art.precio);
     console.log(preciosSeleccionados);
@@ -127,8 +138,6 @@ const obtenerPrecio = () => {
         preciosSinDescuento += (precio);
     })
 }
-
-
 
 console.log(descuentosFinales);
 
