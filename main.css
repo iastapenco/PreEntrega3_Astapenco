@@ -2,3 +2,8 @@
     position: sticky;
     top: 10px;
 }
+
+.footer {
+    height: 6rem;
+    background-color: #686868;
+}

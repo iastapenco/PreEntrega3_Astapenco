@@ -82,6 +82,14 @@ function agregadoCorrectamente(botonId) {
     setTimeout(() => {
         document.getElementById(botonId).setAttribute("class", "btn btn-primary btn-lg");
     }, 1000);
+    Swal.fire({
+        position: 'bottom-end',
+        width: '300px',
+        icon: 'success',
+        title: 'Agregado correctamente',
+        showConfirmButton: false,
+        timer: 1500
+      })
 }
 
 //Manejadores de eventos.
@@ -140,4 +148,26 @@ const obtenerPrecio = () => {
 }
 
 console.log(descuentosFinales);
+
+const jasonPlaceHolder = "https://jsonplaceholder.typicode.com/users";
+const ulMails = document.getElementById("ulMails");
+
+setInterval(() => {
+    fetch(jasonPlaceHolder)
+    .then(response => response.json())
+    .then((datos)=>{
+        mostrarColaboradores(datos);
+    })
+    .catch(error => console.log(error));
+
+    function mostrarColaboradores(datos) {
+        datos.forEach(colaborador => {
+            const li = document.createElement("li");
+            li.textConten = `${colaborador.name}:${colaborador.email} - ${colaborador.phone}`;
+            ulMails.appendChild(li);
+        })
+    }
+}, 250);
+
+
 
